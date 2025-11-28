@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تعليم البرمجة</title>
+    <link rel="stylesheet" href="cssMAYSOOR.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Learn Programming </span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-target="home">Main</a></li>
+                    <li><a href="#" class="nav-link" data-target="languages">Languages</a></li>
+                    <li><a href="#" class="nav-link" data-target="examples">Examples</a></li>
+                    <li><a href="#" class="nav-link" data-target="login"> login</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="showLogin"> Login</button>
+                    <button class="btn btn-primary" id="showSignup"> Create account</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم تسجيل الدخول -->
+    <section class="login-section" id="loginSection">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Wellcome Again</h2>
+                <p>Login To continue learning </p>
+            </div>
+            <div class="login-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" class="form-control" placeholder="Enter Your Email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" class="form-control" placeholder="Enter Password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me </label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-login"> login</button>
+                </form>
+                
+                <div class="divider">or Login using</div>
+                
+                <div class="social-login">
+                    <a href="#" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                
+                <div class="signup-link">
+                     have not account    <a href="#" id="switchToSignup">Create new password</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي -->
+    <main id="mainContent" class="hidden">
+        <!-- القسم الرئيسي -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Learn easy</h1>
+                <p>Special site to learning programmming with four language </p>
+                <a href="#languages" class="btn btn-primary">Start learn now</a>
+            </div>
+        </section>
+
+        <!-- أقسام اللغات -->
+        <section class="languages" id="languages">
+            <div class="container">
+                <h2 class="section-title">Available languages</h2>
+                <div class="language-cards">
+                    <!-- بطاقة HTML -->
+                    <div class="card html">
+                        <div class="card-header">
+                            <h2>HTML</h2>
+                        </div>
+                        <div class="card-body">
+                            <h3>لغة ترميز النص الفائق</h3>
+                            <p>HTML هي العمود الفقري لجميع مواقع الويب. تستخدم لإنشاء هيكل صفحات الويب وتنظيم المحتوى.</p>
+                            <p><strong>الاستخدام:</strong> تطوير الويب الأمامي</p>
+                            <a href="#html-example" class="btn btn-primary">راجع الأمثلة</a>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة CSS -->
+                    <div class="card css">
+                        <div class="card-header">
+                            <h2>CSS</h2>
+                        </div>
+                        <div class="card-body">
+                            <h3>صفحات الطرز المتراصة</h3>
+                            <p>CSS تستخدم لتنسيق وتصميم صفحات الويب، مما يجعلها جذابة وسهلة الاستخدام.</p>
+                            <p><strong>الاستخدام:</strong> تنسيق وتصميم الويب</p>
+                            <a href="#css-example" class="btn btn-primary">راجع الأمثلة</a>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة C++ -->
+                    <div class="card cpp">
+                        <div class="card-header">
+                            <h2>C++</h2>
+                        </div>
+                        <div class="card-body">
+                            <h3>لغة برمجة متعددة الاستخدامات</h3>
+                            <p>C++ هي لغة برمجة قوية تستخدم لتطوير البرامج عالية الأداء، وأنظمة التشغيل، والألعاب.</p>
+                            <p><strong>الاستخدام:</strong> برمجة الأنظمة والتطبيقات</p>
+                            <a href="#cpp-example" class="btn btn-primary">راجع الأمثلة</a>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة Python -->
+                    <div class="card python">
+                        <div class="card-header">
+                            <h2>Python</h2>
+                        </div>
+                        <div class="card-body">
+                            <h3>لغة برمجة سهلة التعلم</h3>
+                            <p>Python هي لغة برمجة متعددة الاستخدامات وسهلة التعلم، تستخدم في تطوير الويب، الذكاء الاصطناعي، وتحليل البيانات.</p>
+                            <p><strong>الاستخدام:</strong> تطبيقات متعددة المجالات</p>
+                            <a href="#python-example" class="btn btn-primary">راجع الأمثلة</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأمثلة -->
+        <section class="examples" id="examples">
+            <div class="container">
+                <h2 class="section-title">أمثلة برمجية</h2>
+                
+                <div class="example-tabs">
+                    <button class="tab-btn active" data-tab="html-example">HTML</button>
+                    <button class="tab-btn" data-tab="css-example">CSS</button>
+                    <button class="tab-btn" data-tab="cpp-example">C++</button>
+                    <button class="tab-btn" data-tab="python-example">Python</button>
+                </div>
+                
+                <div class="tab-content active" id="html-example">
+                    <h3>مثال HTML: هيكل صفحة ويب أساسية</h3>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ar" dir="rtl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;صفحتي الأولى&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;مرحباً بالعالم!&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;p&gt;هذه هي صفحتي الأولى باستخدام HTML.&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;عنصر قائمة 1&lt;/li&gt;
+            &lt;li&gt;عنصر قائمة 2&lt;/li&gt;
+            &lt;li&gt;عنصر قائمة 3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;جميع الحقوق محفوظة &copy; 2023&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                
+                <div class="tab-content" id="css-example">
+                    <h3>مثال CSS: تنسيق صفحة ويب</h3>
+                    <pre><code>/* تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* تنسيق الهيدر */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* تنسيق العنوان الرئيسي */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الفقرات */
+p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* تنسيق القوائم */
+ul {
+    list-style-type: square;
+    margin-right: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}</code></pre>
+                </div>
+                
+                <div class="tab-content" id="cpp-example">
+                    <h3>مثال C++: برنامج حسابي بسيط</h3>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+// دالة لجمع عددين
+int add(int a, int b) {
+    return a + b;
+}
+
+// دالة لطرح عددين
+int subtract(int a, int b) {
+    return a - b;
+}
+
+// دالة رئيسية
+int main() {
+    int num1, num2;
+    
+    cout &lt;&lt; "أدخل الرقم الأول: ";
+    cin &gt;&gt; num1;
+    
+    cout &lt;&lt; "أدخل الرقم الثاني: ";
+    cin &gt;&gt; num2;
+    
+    // استدعاء الدوال وعرض النتائج
+    cout &lt;&lt; "مجموع الرقمين: " &lt;&lt; add(num1, num2) &lt;&lt; endl;
+    cout &lt;&lt; "فرق الرقمين: " &lt;&lt; subtract(num1, num2) &lt;&lt; endl;
+    
+    return 0;
+}</code></pre>
+                </div>
+                
+                <div class="tab-content" id="python-example">
+                    <h3>مثال Python: آلة حاسبة بسيطة</h3>
+                    <pre><code># دالة لجمع عددين
+def add(a, b):
+    return a + b
+
+# دالة لطرح عددين
+def subtract(a, b):
+    return a - b
+
+# دالة لضرب عددين
+def multiply(a, b):
+    return a * b
+
+# دالة لقسمة عددين
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "لا يمكن القسمة على صفر!"
+
+# البرنامج الرئيسي
+print("آلة حاسبة بسيطة")
+print("1. جمع")
+print("2. طرح")
+print("3. ضرب")
+print("4. قسمة")
+
+choice = input("اختر العملية (1/2/3/4): ")
+
+num1 = float(input("أدخل الرقم الأول: "))
+num2 = float(input("أدخل الرقم الثاني: "))
+
+if choice == '1':
+    print(f"النتيجة: {add(num1, num2)}")
+elif choice == '2':
+    print(f"النتيجة: {subtract(num1, num2)}")
+elif choice == '3':
+    print(f"النتيجة: {multiply(num1, num2)}")
+elif choice == '4':
+    print(f"النتيجة: {divide(num1, num2)}")
+else:
+    print("اختيار غير صحيح")</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Mysoor ali ghanim </h3>
+                <p>موقع تعليمي مجاني لتعلم أساسيات البرمجة</p>
+                <ul class="footer-links">
+                    <li><a href="#" class="nav-link" data-target="home">الرئيسية</a></li>
+                    <li><a href="#" class="nav-link" data-target="languages">اللغات</a></li>
+                    <li><a href="#" class="nav-link" data-target="examples">الأمثلة</a></li>
+                    <li><a href="#" class="nav-link" data-target="login">تسجيل الدخول</a></li>
+                </ul>
+                <p>جميع الحقوق محفوظة &copy; 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js MAYSOOR.js"></script>
+</body>
+</html>
